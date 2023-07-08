@@ -1,0 +1,74 @@
+/* BARRA DE BUSQUEDA */
+.barra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    background-color: #fff;
+
+    border: 2px solid #222a2e;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 #222a2e;
+
+
+    height: 11vh;
+    width: 50%;
+    margin: 8vh auto 6vh;
+}
+.barra input {
+    border: none;
+    outline: none;
+
+    width: 80%;
+
+    font-size: 3vh;
+    font-family: 'Changa', sans-serif;
+
+    padding-left: 25px;
+}
+.barra input::placeholder{
+    font-size: 3vh;
+    font-family: 'Changa', sans-serif;
+
+    color: #222a2e;
+}
+.barra button {
+    width: 10%;
+
+    border: none;
+}
+.barra button:hover {
+    background-color: #57575742;
+}
+.barra button span {
+    font-size: 6.5vh;
+    color: #000;
+}
+/* vista desde tablet */
+@media screen and (max-width:1000px) and (min-width:700px) {
+    /* TAMAÑO */
+    .barra {
+        width: 80%;
+    }
+}
+/* vista desde telefono */
+@media screen and (max-width:700px) {
+    /* TAMAÑO */
+    .barra {
+        width: 95%;
+        height: 8vh;
+    }
+    /* LETRA */
+    .barra input {
+        font-size: 2.5vh;
+
+        width: 75%;
+    }
+    .barra button{
+        width: 12%;
+    }
+    .barra button span {
+        font-size: 5vh;
+    }
+}
+    
