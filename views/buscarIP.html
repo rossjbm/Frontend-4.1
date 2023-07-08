@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<link rel="stylesheet" type="text/css" href="../styles/style_buscar.css">
+
+	<!-- iconos -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<!-- fuentes -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<header>
+		<a id="boton-menu" href="javascript:void(0)" onclick="menuAbrir()">
+			<span class="material-symbols-outlined">menu</span>
+		</a>
+		<div id="navegacion">
+			<div class="menu">
+				<div class="menu-logo">
+					<span class="material-symbols-outlined">person_pin_circle</span>
+					<h4>IpLife</h4>
+				</div>
+				<a id="menu-boton-cerrar" href="javascript:void(0)" onclick="menuCerrar()">
+					<span class="material-symbols-outlined">close</span>
+				</a>
+			</div>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="buscarIP.html">Buscar IP</a>
+				<a href="buscarDomain.html">Buscar Dominio</a>
+				<a href="index.html#informacion">Sobre IpLife</a>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="titular">
+			<div class="titular-titulo">
+				<span class="material-symbols-outlined">person_pin_circle</span><h4>IpLife</h4>
+			</div>
+		</section>
+	
+		<div class="barra">
+			<input type="text" placeholder="Ingresa IP a buscar" id="buscar_ip">
+			<button value="Buscar" onclick="busquedaIP()"><span class="material-symbols-outlined">search</span></button>
+		</div>
+	
+		<section class="aplicacion">
+			<section class="datos">
+				<h2>¡Información Obtenida!</h2>
+				<div id="respuesta">
+					<h3><b id="ip">${informacion.ip}</b></h3>
+					<p><b>Ubicación:</b><i id="ubicacion"> ${informacion.city}, ${informacion.region}, ${informacion.country}</i></p>
+					<p><b>Código Postal:</b><i id="postal"> ${informacion.postalCode}</i></p>
+					<p><b>Coordenadas:</b><i id="coord"> ${informacion.lat} , ${informacion.lng}</i></p>
+					<p><b>Zona Horaria:</b><i id="timezone"> ${informacion.timezone}</i></p>
+					<p><b>Proveedor de Servicios:</b><i id="isp"> ${informacion.isp}</i></p>
+					<p><b>Nro de Sistema Autónomo:</b><i id="asn"> ${informacion.asn}</i></p>
+					<p><b>Dominio:</b><i id="dominio"> ${informacion.domain}</i></p>
+				</div>
+			</section>
+	
+			<section class="mapa">
+				<h2>Ubicación en el Mapa</h2>
+				<div id="map"></div>
+			</section>
+		</section>
+	</main>
+
+	<footer>
+		<div>
+			<p class="footer-contacto">¡Conoce más sobre nosotros en Redes!</p>
+			<nav>
+				<a href="#"><img src="../media/facebook.png" alt="facebook"></a>
+				<a href="#"><img src="../media/instagram.png" alt="instagram"></a>
+				<a href="#"><img src="../media/twitter.png" alt="twitter"></a>    
+			</nav>
+		</div>
+		<div class="footer-derechos">
+			<p>Todos los derechos reservados &copy IpLive 2030</p>
+			<p>Contenido gracias a las API's <a href="#">Leaflet</a> y <a href="#">GeoIpify</a></p>
+		</div>
+	</footer>
+	
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>   		
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../javascript/geoipify.js"></script>
+	<script type="text/javascript" src="../javascript/leaflet.js"></script>
+	<script type="text/javascript" src="../javascript/funcionalidad.js"></script>
+</body>
+</html>
