@@ -129,6 +129,9 @@ body{
 
         height: 100%;
     }
+    .mapa , .datos {
+        border-radius: 20px;
+    }
 }
 /* vista desde telefono */
 @media screen and (max-width:700px) {
