@@ -7,6 +7,5 @@ function menuAbrir() {
 function menuCerrar() {
     if (id.style.display==="flex") {
         id.style.display="none";
-        document.getElementById("boton-menu").style.display="block"
     }
 }

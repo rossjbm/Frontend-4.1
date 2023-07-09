@@ -62,7 +62,7 @@ function obtenerResultadoIP(){
 }
 
 function obtenerResultadoDOMAIN(){
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${APIKey}&domainAddress=${dominio}`,{
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${APIKey}&domainAddress=${domain}`,{
         method: "Get",
         headers: {
         accept: 'application/json'
